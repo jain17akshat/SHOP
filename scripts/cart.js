@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
+    
     // Add "Clear Cart" button
     const clearBtn = document.createElement("button");
     clearBtn.innerText = "Clear Cart";
@@ -87,5 +88,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(clearBtn);
   
     updateCartUI();
+
+    function placeOrder() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add some items before placing an order.");
+        return;
+      }
+    
+      alert("🎉 Order placed successfully!");
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload(); // Refresh the page
+    }
+    
   });
   
