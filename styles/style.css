@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background:white;
+  padding: 15px 30px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }}
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+.logo:hover{
+  color:lightblue;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color:lightskyblue;
+  padding: auto;
+}
+
+.hero {
+  background: linear-gradient(to right ,lightblue,white);
+  /* background: linear-gradient(to bottom, lightblue, white, lightblue); */
+
+  /* background: linear-gradient(to right,black,white);
+  background: linear-gradient(to left,black,white); */
+
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin: 40px;
+font-weight: 1100;
+}
+.hero h1:hover{
+  
+  transition: color 0.3s ease;
+color:black
+}
+
+
+
+.category {
+  padding: 40px 30px;
+  background: linear-gradient(to right ,lightblue,white);
+  /* background: linear-gradient(to right,black,white);
+  background: linear-gradient(to left,black,white); */
+
+}
+
+
+.category h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: Black;
+  background: white;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background:black;
+  border: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 150px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.footer {
+  background: linear-gradient(to right ,lightblue,white);
+
+  color: black;
+font-weight: 500;
+  text-align: center;
+
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.category {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 200px;
+  background:white;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.add-to-cart {
+  background-color: white;
+  color: black;
+  padding: 10px 16px;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.product-card {
+  background-color:white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@keyframes textColorChange {
+  0% {
+    color: white;
+  }
+  33% {
+    color: black;
+  }
+  
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin: 40px;
+  font-weight: 1100;
+  animation: textColorChange 5s infinite ease-in-out;
+}
+
+.hero p{
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin: 40px;
+  font-weight:bolder;
+  
+  animation: textColorChange 5s infinite ease-in-out;
+}
+@keyframes textColorChange {
+  0% {
+    color: white;
+  }
+  33% {
+    color: black;
+  }
+  
+}/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+}
