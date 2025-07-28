@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
   
     function updateCartUI() {
+    document.getElementById("placeOrderBtn").addEventListener("click", placeOrder);
+
       cartContainer.innerHTML = "";
       let total = 0;
   
@@ -40,6 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
       totalPriceElement.innerText = `Total: ₹${total}`;
       attachEventListeners();
+    }
+    function placeOrder() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add some items before placing an order.");
+        return;
+      }
+    
+      alert("🎉 Order placed successfully!");
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload(); // Refresh the page
     }
   
     function attachEventListeners() {
@@ -89,17 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     updateCartUI();
 
-    function placeOrder() {
-      if (cart.length === 0) {
-        alert("Your cart is empty. Please add some items before placing an order.");
-        return;
-      }
-    
-      alert("🎉 Order placed successfully!");
-      cart = [];
-      localStorage.setItem("cart", JSON.stringify(cart));
-      location.reload(); // Refresh the page
-    }
     
   });
+  
+  
   

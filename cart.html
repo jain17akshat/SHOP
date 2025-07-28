@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="styles/cart.css" />
+  <meta charset="UTF-8">
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="styles/cart.css">
 </head>
 <body>
-
   <header>Your Shopping Cart</header>
 
   <div class="cart-container" id="cartContainer">
+    <!-- Cart items will be added here dynamically -->
   </div>
 
   <div class="total-section" id="totalPrice">Total: ₹0</div>
 
-  <div style="text-align: center;">
+  <div class="button-container">
     <a href="home.html" class="back-btn">Continue Shopping</a>
+    <button id="placeOrderBtn" class="order-btn">Place Order</button>
+
   </div>
-  <div style="text-align: center; margin-top: 10px;"></div>
-  <button onclick="placeOrder()" class="Order-btn">Place Order</button>
-</div>
-  
-  
+
   <script src="scripts/cart.js"></script>
 </body>
 </html>
