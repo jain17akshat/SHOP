@@ -104,7 +104,6 @@
     </div>
   </section>
 
-  <!-- Kids Section -->
   <section class="category" id="kids">
     <h2>Kids' Clothing</h2>
     <div class="products">
@@ -141,7 +140,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Navkar Clothing. All rights reserved.</p>
   </footer>
@@ -150,20 +148,11 @@
   
 
   <script>
-    function addToCart(name, price, image) {
-      const item = { name, price, image };
-      
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-  
-      window.location.href = "cart.html";
-    }
+    
 
     function addToCart(name, price, image) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // Check if item already exists
   const existingItem = cart.find(item => item.name === name);
 
   if (existingItem) {
