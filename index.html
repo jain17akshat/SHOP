@@ -2,192 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navkar Clothing</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVKAR</title>
+  <link rel="stylesheet" href="styles/login.css" />
 </head>
 <body>
+  <div class="container" onclick="">
+    
+    <!-- Top Decorative Background -->
+    <div class="top"></div>
 
-  <!-- Navbar -->
-  
-  <div class="navbar">
-    <div class="logo">NAVKAR</div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#">MEN</a></li>
-      <li><a href="#">WOMEN</a></li>
-      <li><a href="#">KIDS</a></li>
-      <li><a href="#">CART</a></li>
-    </ul>
+    <!-- Bottom Decorative Background -->
+    <div class="bottom"></div>
+
+    <!-- Center Login Box -->
+    <div class="center">
+      <h2>Please Sign In</h2>
+
+      <div class="login-box">
+        <form onsubmit="return login(event)">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <button   type="submit">Log In</button>
+        </form>
+        <div class="center-link">
+          <a href="signup.html" class="btn">Create New Account</a>
+        </div>
+        
+        
+      </div>
+
+      <h2>&nbsp;</h2>
+    </div>
   </div>
-  
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Navkar Clothing</h1>
-    <p>Style for Every Generation!!</p>
-  </section>
-
-  <!-- Men Section -->
-  <section class="category" id="men">
-    <h2>Men's Clothing</h2>
-    <div class="products">
-      <div class="product-card">
-        <img src="images/shirt1.png" alt="Formal Shirt">
-        <p>Formal Shirt</p>
-        <p>₹999 - Perfect for office wear</p>
-        <button class="add-to-cart" onclick="addToCart('Formal Shirt', 999, 'images/shirt1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/jeans1.png" alt="Denim Jeans">
-        <p>Denim Jeans</p>
-        <p>₹1199 - Durable and stylish</p>
-        <button class="add-to-cart" onclick="addToCart('Denim Jeans', 1199, 'images/jeans1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/tshirt1.png" alt="Cotton T-shirt">
-        <p>Cotton T-shirt</p>
-        <p>₹499 - Comfortable everyday wear</p>
-        <button class="add-to-cart" onclick="addToCart('Cotton T-shirt', 499, 'images/tshirt1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/blazer.png" alt="Casual Blazer">
-        <p>Casual Blazer</p>
-        <p>₹1599 - Smart casual look</p>
-        <button class="add-to-cart" onclick="addToCart('Casual Blazer', 1599, 'images/blazer.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/kurta1.png" alt="Traditional Kurta">
-        <p>Traditional Kurta</p>
-        <p>₹899 - Ethnic wear</p>
-        <button class="add-to-cart" onclick="addToCart('Traditional Kurta', 899, 'images/kurta1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/kurta1.png" alt="Traditional Kurta">
-        <p>Traditional Kurta</p>
-        <p>₹899 - Ethnic wear</p>
-        <button class="add-to-cart" onclick="addToCart('Traditional Kurta', 899, 'images/kurta1.png')">+ Add to Cart</button>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- Women Section -->
-  <section class="category" id="women">
-    <h2>Women's Clothing</h2>
-    <div class="products">
-      <div class="product-card">
-        <img src="images/flora1.png" alt="Floral Dress">
-        <p>Floral Dress</p>
-        <p>₹1299 - Elegant and breezy</p>
-        <button class="add-to-cart" onclick="addToCart('Floral Dress', 1299, 'images/flora1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/casual1.png" alt="Casual Top">
-        <p>Casual Top</p>
-        <p>₹599 - Trendy casual wear</p>
-        <button class="add-to-cart" onclick="addToCart('Casual Top', 599, 'images/casual1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/high1.png" alt="High Waist Jeans">
-        <p>High Waist Jeans</p>
-        <p>₹999 - Stretchable and stylish</p>
-        <button class="add-to-cart" onclick="addToCart('High Waist Jeans', 999, 'images/high1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/gown1.png" alt="Party Gown">
-        <p>Party Gown</p>
-        <p>₹1799 - Glamorous evening wear</p>
-        <button class="add-to-cart" onclick="addToCart('Party Gown', 1799, 'images/gown1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/saree1.png" alt="Designer Saree">
-        <p>Designer Saree</p>
-        <p>₹1499 - Ethnic fashion</p>
-        <button class="add-to-cart" onclick="addToCart('Designer Saree', 1499, 'images/saree1.png')">+ Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kids Section -->
-  <section class="category" id="kids">
-    <h2>Kids' Clothing</h2>
-    <div class="products">
-      <div class="product-card">
-        <img src="images/ctshirt1.png" alt="Cartoon T-shirt">
-        <p>Cartoon T-shirt</p>
-        <p>₹399 - Fun and colorful</p>
-        <button class="add-to-cart" onclick="addToCart('Cartoon T-shirt', 399, 'images/ctshirt1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/kidsshirt.png" alt="Printed Shirt">
-        <p>Printed Shirt</p>
-        <p>₹499 - Bright & cheerful</p>
-        <button class="add-to-cart" onclick="addToCart('Printed Shirt', 499, 'images/kidsshirt.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/shorts1.png" alt="Cotton Shorts">
-        <p>Cotton Shorts</p>
-        <p>₹349 - Playtime ready</p>
-        <button class="add-to-cart" onclick="addToCart('Cotton Shorts', 349, 'images/shorts1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/jacket1.png" alt="Winter Jacket">
-        <p>Winter Jacket</p>
-        <p>₹799 - Warm and cozy</p>
-        <button class="add-to-cart" onclick="addToCart('Winter Jacket', 799, 'images/jacket1.png')">+ Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/kidsjeans1.png" alt="Kids Jeans">
-        <p>Kids Jeans</p>
-        <p>₹699 - Soft denim</p>
-        <button class="add-to-cart" onclick="addToCart('Kids Jeans', 699, 'images/kidsjeans1.png')">+ Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Navkar Clothing. All rights reserved.</p>
-  </footer>
-
- 
-  
-
-  <script>
-    function addToCart(name, price, image) {
-      const item = { name, price, image };
-      
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-  
-      window.location.href = "cart.html";
-    }
-
-    function addToCart(name, price, image) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  // Check if item already exists
-  const existingItem = cart.find(item => item.name === name);
-
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push({ name, price, image, quantity: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  window.location.href = "cart.html";
-}
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-
-  </script>
-  
-</body>
-</html>
-
-
+  <script src="scripts/login.js"></script>
 </body>
 </html>

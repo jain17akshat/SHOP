@@ -10,7 +10,7 @@
 
       if (email === savedEmail && password === savedPassword) {
         alert("Login successful!");
-        window.location.href = "index.html"; 
+        window.location.href = "home.html"; 
       } else {
         alert("Invalid email or password!");
       }

@@ -16,6 +16,6 @@ function createAccount(e) {
   localStorage.setItem("fb_user_name", name);
 
   alert("Account created! Please log in.");
-  window.location.href = "login.html"; // Redirect to login
+  window.location.href = "index.html"; // Redirect to login
   return false;
 }
