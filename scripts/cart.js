@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // 🟢 Attach listener only once
   placeOrderBtn.addEventListener("click", placeOrder);
 
   function updateCartUI() {
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("🎉 Order placed successfully!");
     cart = [];
     localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload(); // Refresh the page
+    location.reload(); 
   }
 
   function attachEventListeners() {
@@ -85,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add "Clear Cart" button
   const clearBtn = document.createElement("button");
   clearBtn.innerText = "Clear Cart";
   clearBtn.className = "clear-btn";
