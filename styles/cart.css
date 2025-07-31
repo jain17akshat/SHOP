@@ -79,7 +79,7 @@ header{
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px; /* To separate it from other buttons */
+  margin-left: 10px;
 }
 
 .clear-btn:hover {
